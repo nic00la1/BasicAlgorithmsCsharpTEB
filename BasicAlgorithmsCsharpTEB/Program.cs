@@ -8,6 +8,8 @@ public class Program
         IsPrime(42);
         GCD(196, 420);
         DisplayCaesarCipher("Nicola Kaleta", 3);
+        DisplayFibonacci(
+            32); // Example: Display the first 10 Fibonacci numbers
     }
 
     // Zadanie 1 - Sprawdzanie czy liczba jest pierwszą
@@ -87,5 +89,35 @@ public class Program
         string encryptedText = CaesarCipher(originalText, shift);
 
         Console.WriteLine($"{originalText} --> {encryptedText}");
+    }
+
+    // Zadanie 4 - Znajdowanie liczb Fibonacciego
+    // Ciąg Fibonacciego to sekwencja liczb, w której każda liczba jest sumą dwóch poprzednich, gdzie
+    // pierwsze liczby w ciągu to 0 oraz 1. Ogólnie dla n ≥ 2, ciąg Fibonacciego jest definiowany jako:
+    // F(n) = F(n−1) + F(n−2)
+    public static void DisplayFibonacci(int n)
+    {
+        Console.WriteLine("\n================ ZADANIE 4 ================");
+        Console.WriteLine("Ciąg Fibonacciego\n");
+
+        if (n < 0)
+        {
+            Console.WriteLine("Liczba musi być większa lub równa 0");
+            return;
+        }
+
+        long a = 0;
+        long b = 1;
+
+        Console.Write("Sekwencja Fibonacciego: ");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write(a + " ");
+            long temp = a;
+            a = b;
+            b = temp + b;
+        }
+
+        Console.WriteLine();
     }
 }
