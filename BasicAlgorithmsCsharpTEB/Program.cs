@@ -53,7 +53,11 @@ public class Program
         InsertionSort(numbers);
     }
 
-    // Zadanie 1 - Sprawdzanie czy liczba jest pierwszą
+    /// <summary>
+    /// Sprawdza, czy podana liczba jest liczbą pierwszą.
+    /// </summary>
+    /// <param name="number">Liczba do sprawdzenia.</param>
+    /// <returns>True, jeśli liczba jest pierwsza, w przeciwnym razie False.</returns>
     public static bool IsPrime(int number)
     {
         Console.WriteLine("\n================ ZADANIE 1 ================");
@@ -78,7 +82,12 @@ public class Program
         return true;
     }
 
-    // Zadanie 2 - Algorytm Euklidesa
+    /// <summary>
+    /// Znajduje największy wspólny dzielnik dwóch liczb za pomocą algorytmu Euklidesa.
+    /// </summary>
+    /// <param name="a">Pierwsza liczba.</param>
+    /// <param name="b">Druga liczba.</param>
+    /// <returns>Największy wspólny dzielnik.</returns>
     public static int GCD(int a, int b)
     {
         Console.WriteLine("\n================ ZADANIE 2 ================");
@@ -100,7 +109,12 @@ public class Program
         return a;
     }
 
-    // Zadanie 3 - Szyfr Cezara
+    /// <summary>
+    /// Szyfruje tekst za pomocą szyfru Cezara.
+    /// </summary>
+    /// <param name="text">Tekst do zaszyfrowania.</param>
+    /// <param name="shift">Liczba miejsc przesunięcia w alfabecie.</param>
+    /// <returns>Zaszyfrowany tekst.</returns>
     public static string CaesarCipher(string text, int shift)
     {
         Console.WriteLine("\n================ ZADANIE 3 ================");
@@ -124,7 +138,11 @@ public class Program
         return new string(buffer);
     }
 
-    // Metoda pomocnicza do wyświetlania zaszyfrowanego tekstu
+    /// <summary>
+    /// Wyświetla zaszyfrowany tekst za pomocą szyfru Cezara.
+    /// </summary>
+    /// <param name="originalText">Oryginalny tekst.</param>
+    /// <param name="shift">Liczba miejsc przesunięcia w alfabecie.</param>
     public static void DisplayCaesarCipher(string originalText, int shift)
     {
         string encryptedText = CaesarCipher(originalText, shift);
@@ -132,7 +150,10 @@ public class Program
         WaitForUser();
     }
 
-    // Zadanie 4 - Znajdowanie liczb Fibonacciego
+    /// <summary>
+    /// Wyświetla n liczb Fibonacciego.
+    /// </summary>
+    /// <param name="n">Liczba liczb Fibonacciego do wyświetlenia.</param>
     public static void DisplayFibonacci(int n)
     {
         Console.WriteLine("\n================ ZADANIE 4 ================");
@@ -161,7 +182,10 @@ public class Program
         WaitForUser();
     }
 
-    // Zadanie 5 - Rozkład liczby na czynniki pierwsze
+    /// <summary>
+    /// Rozkłada liczbę na czynniki pierwsze.
+    /// </summary>
+    /// <param name="number">Liczba do rozłożenia na czynniki pierwsze.</param>
     public static void PrimeFactors(int number)
     {
         Console.WriteLine("\n================ ZADANIE 5 ================");
@@ -186,7 +210,10 @@ public class Program
         WaitForUser();
     }
 
-    // Zadanie 6 - Znajdowanie najmniejszego oraz największego elementu w zbiorze
+    /// <summary>
+    /// Znajduje najmniejszy i największy element w zbiorze.
+    /// </summary>
+    /// <param name="numbers">Tablica liczb.</param>
     public static void FindMinMax(int[] numbers)
     {
         Console.WriteLine("\n================ ZADANIE 6 ================");
@@ -209,7 +236,10 @@ public class Program
         WaitForUser();
     }
 
-    // Zadanie 7 - Sortowanie bąbelkowe
+    /// <summary>
+    /// Sortuje tablicę liczb za pomocą sortowania bąbelkowego.
+    /// </summary>
+    /// <param name="numbers">Tablica liczb do posortowania.</param>
     public static void BubbleSort(int[] numbers)
     {
         Console.WriteLine("\n================ ZADANIE 7 ================");
@@ -229,7 +259,10 @@ public class Program
         WaitForUser();
     }
 
-    // Zadanie 8 - Sortowanie przez wybór
+    /// <summary>
+    /// Sortuje tablicę liczb za pomocą sortowania przez wybór.
+    /// </summary>
+    /// <param name="numbers">Tablica liczb do posortowania.</param>
     public static void SelectionSort(int[] numbers)
     {
         Console.WriteLine("\n================ ZADANIE 8 ================");
@@ -252,7 +285,10 @@ public class Program
         WaitForUser();
     }
 
-    // Zadanie 9 - Sortowanie przez wstawianie
+    /// <summary>
+    /// Sortuje tablicę liczb za pomocą sortowania przez wstawianie.
+    /// </summary>
+    /// <param name="numbers">Tablica liczb do posortowania.</param>
     public static void InsertionSort(int[] numbers)
     {
         Console.WriteLine("\n================ ZADANIE 9 ================");
@@ -277,7 +313,9 @@ public class Program
         WaitForUser();
     }
 
-    // Metoda pomocnicza do oczekiwania na naciśnięcie klawisza i czyszczenia konsoli
+    /// <summary>
+    /// Oczekuje na naciśnięcie klawisza i czyści konsolę.
+    /// </summary>
     public static void WaitForUser()
     {
         Console.ReadKey();
