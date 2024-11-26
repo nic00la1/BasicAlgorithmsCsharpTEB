@@ -1,0 +1,4 @@
+1. Środowisko programistyczne, w którym był pisany kod ----> Visual Studio 2022
+2. Język programowania ----> C#
+3. System operacyjny, na którym kod był zapisywany -----> Windows 11
+4. 
