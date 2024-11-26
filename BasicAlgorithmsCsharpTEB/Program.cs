@@ -7,6 +7,7 @@ public class Program
         Console.WriteLine("Witamy w aplikacji: Algorytmy podstawowe C#!");
         IsPrime(42);
         GCD(196, 420);
+        DisplayCaesarCipher("Nicola Kaleta", 3);
     }
 
     // Zadanie 1 - Sprawdzanie czy liczba jest pierwszą
@@ -57,5 +58,34 @@ public class Program
     // alfabecie o stałą liczbę miejsc. Dla przykładu, jeśli przesuniemy litery o 3 miejsca, to 'A' stanie się
     // 'D', 'B' stanie się 'E', i tak dalej. Przy końcu alfabetu, litery są "owijane" wokół, co oznacza, że po
     // 'Z' wracamy do 'A
+    public static string CaesarCipher(string text, int shift)
+    {
+        Console.WriteLine("\n================ ZADANIE 3 ================");
+        Console.WriteLine("Szyfr Cezara\n");
 
+        char[] buffer = text.ToCharArray();
+
+        for (int i = 0; i < buffer.Length; i++)
+        {
+            char letter = buffer[i];
+
+            if (char.IsLetter(letter))
+            {
+                char offset = char.IsUpper(letter) ? 'A' : 'a';
+                letter = (char)((letter + shift - offset) % 26 + offset);
+            }
+
+            buffer[i] = letter;
+        }
+
+        return new string(buffer);
+    }
+
+    // Method to display original and encrypted text
+    public static void DisplayCaesarCipher(string originalText, int shift)
+    {
+        string encryptedText = CaesarCipher(originalText, shift);
+
+        Console.WriteLine($"{originalText} --> {encryptedText}");
+    }
 }
